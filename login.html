@@ -17,6 +17,8 @@
     crossorigin="anonymous" />
   <!-- Bootstrap CSS Local -->
   <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Drawer CSS File -->
+  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
   <title>Amazon : Navbar</title>
@@ -25,9 +27,33 @@
 <body>
   <!-- Navbar Starts -->
   <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-    <button class="btn btn-outline-light">
+    <!-- Drawer Start -->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazonDrawer">
       <i class="fas fa-sliders-h"></i>
     </button>
+
+    <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+      aria-hidden="true" id="amazonDrawer">
+      <div class="drawer-content drawer-content-scrollable" role="document">
+        <div class="drawer-header bg-dark text-white">
+          <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+            <i class="fas fa-user-circle"></i>
+            Hello, Sign In
+          </h4>
+        </div>
+        <div class="drawer-body">
+          <h6 class="text-muted text-uppercase">Help & Settings</h6>
+          <a href="#" class="btn btn-outline-success my-2 btn-sm">You Account</a>
+          <a href="login.html" class="btn btn-warning my-2  btn-sm">Sign in</a>
+        </div>
+        <div class="drawer-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
+            <i class="fas fa-2x fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div> <!-- Drawer Ends -->
+
     <a class="navbar-brand pl-2" href="#">
       <img src="img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white">
     </a>
@@ -139,17 +165,19 @@
         <form novalidate>
           <div class="form-group">
             <label for="userEmail">Email: </label>
-            <input type="email" name="email" class="form-control" placeholder="abc@abc.com" id="userEmail" aria-describedby="emailHelp">
+            <input type="email" name="email" class="form-control" placeholder="abc@abc.com" id="userEmail"
+              aria-describedby="emailHelp">
             <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
           </div>
           <div class="form-group">
             <label for="userPassword">Password: </label>
-            <input type="password" class="form-control" placeholder="******" name="password" id="userPassword" aria-describedby="passwordHelp">
+            <input type="password" class="form-control" placeholder="******" name="password" id="userPassword"
+              aria-describedby="passwordHelp">
             <small id="passwordHelp" class="form-text text-muted">Password must be at least 6 characters.</small>
           </div>
           <button type="submit" class="btn btn-warning w-100 shadow btn-sm rounded">Signin</button>
         </form> <!-- Login Form Ends -->
-        
+
         <!-- OR Seperator -->
         <hr class="hr-text" data-content="New to Amazon?">
 
@@ -176,6 +204,8 @@
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
     integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
     crossorigin="anonymous"></script>
+  <!-- Drawer JS File -->
+  <script src="js/bootstrap-drawer.min.js"></script>
   <!-- Custom JavaScript -->
   <script src="js/custom.js"></script>
 </body>
