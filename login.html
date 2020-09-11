@@ -75,7 +75,8 @@
             <form class="p-3">
               <div class="dropdown-divider"></div>
               <div class="custom-control custom-radio mb-2">
-                <input class="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english" checked>
+                <input class="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english"
+                  checked>
                 <label class="custom-control-label" for="englishLang">
                   <img src="img/flag/english.svg" alt="uk flag" width="50" height="30">
                 </label>
@@ -107,8 +108,8 @@
         </li> <!-- Preffered Language Ends -->
         <!-- User Account Starts -->
         <li class="nav-item dropdown px-2">
-          <a class="nav-link" href="login.html" id="userAccount" role="button" data-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">
+          <a class="nav-link" href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
             <i class="fas fa-2x fa-user-circle"></i>
           </a>
           <div class="dropdown-menu px-3" aria-labelledby="userAccount">
@@ -128,6 +129,41 @@
       </ul>
     </div>
   </nav> <!-- Navbar Ends -->
+
+  <!-- Login Form Card Starts -->
+  <div class="container mb-5">
+    <div class="card mx-auto mt-5 pb-3 shadow rounded" style="width: 25rem;">
+      <div class="card-body">
+        <h4 class="card-title">Login</h4>
+        <!-- Login Form Start -->
+        <form novalidate>
+          <div class="form-group">
+            <label for="userEmail">Email: </label>
+            <input type="email" name="email" class="form-control" placeholder="abc@abc.com" id="userEmail" aria-describedby="emailHelp">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+          </div>
+          <div class="form-group">
+            <label for="userPassword">Password: </label>
+            <input type="password" class="form-control" placeholder="******" name="password" id="userPassword" aria-describedby="passwordHelp">
+            <small id="passwordHelp" class="form-text text-muted">Password must be at least 6 characters.</small>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 shadow btn-sm rounded">Signin</button>
+        </form> <!-- Login Form Ends -->
+        
+        <!-- OR Seperator -->
+        <hr class="hr-text" data-content="New to Amazon?">
+
+        <!-- Create account button -->
+        <a href="register.html" class="btn btn-dark btn-sm w-100 mt-2">Create your Amazon account</a>
+        <a href="#" class="btn btn-outline-success btn-sm w-100 mt-2">
+          <i class="fab fa-google"></i> Sign in with Google
+        </a>
+        <a href="#" class="btn btn-outline-primary btn-sm w-100 mt-2">
+          <i class="fab fa-facebook-square"></i> Sign in with Facebook
+        </a>
+      </div>
+    </div>
+  </div> <!-- Login Form Card Ends -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
