@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
-  <title>Amazon : Login</title>
+  <title>Amazon : Register</title>
 </head>
 
 <body>
@@ -156,13 +156,17 @@
     </div>
   </nav> <!-- Navbar Ends -->
 
-  <!-- Login Form Card Starts -->
+  <!-- Register Form Card Starts -->
   <div class="container mb-5">
     <div class="card mx-auto mt-5 pb-3 shadow rounded" style="width: 25rem;">
       <div class="card-body">
-        <h4 class="card-title">Login</h4>
-        <!-- Login Form Start -->
+        <h4 class="card-title">Register</h4>
+        <!-- Register Form Start -->
         <form novalidate>
+          <div class="form-group">
+            <label for="userName">Your name: </label>
+            <input type="text" name="name" class="form-control" placeholder="Ganguly Tech" id="userName">
+          </div>
           <div class="form-group">
             <label for="userEmail">Email: </label>
             <input type="email" name="email" class="form-control" placeholder="abc@abc.com" id="userEmail"
@@ -175,14 +179,20 @@
               aria-describedby="passwordHelp">
             <small id="passwordHelp" class="form-text text-muted"><i class="fas text-primary fa-info"></i> Password must be at least 6 characters.</small>
           </div>
-          <button type="submit" class="btn btn-warning w-100 shadow btn-sm rounded">Sign in</button>
-        </form> <!-- Login Form Ends -->
+          <div class="form-group">
+            <label for="userPassword2">Enter Again Password: </label>
+            <input type="password" class="form-control" placeholder="******" name="password2" id="userPassword2"
+              aria-describedby="passwordHelp2">
+            <small id="passwordHelp2" class="form-text text-muted"><i class="fas text-primary fa-info"></i> Password must match the above.</small>
+          </div>
+          <button type="submit" class="btn btn-warning w-100 shadow btn-sm rounded">Register</button>
+        </form> <!-- Register Form Ends -->
 
         <!-- OR Seperator -->
-        <hr class="hr-text" data-content="New to Amazon?">
+        <hr class="hr-text" data-content="OR">
 
         <!-- Create account button -->
-        <a href="register.html" class="btn btn-dark btn-sm w-100 mt-2">Create your Amazon account</a>
+        <p class="text-center">Already have an account? <a href="login.html">Sign in <i class="fas fa-caret-right"></i></a></p>
         <a href="#" class="btn btn-outline-success btn-sm w-100 mt-2">
           <i class="fab fa-google"></i> Sign in with Google
         </a>
@@ -191,7 +201,7 @@
         </a>
       </div>
     </div>
-  </div> <!-- Login Form Card Ends -->
+  </div> <!-- Register Form Card Ends -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
