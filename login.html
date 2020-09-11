@@ -162,18 +162,30 @@
       <div class="card-body">
         <h4 class="card-title">Login</h4>
         <!-- Login Form Start -->
-        <form novalidate>
+        <form class="needs-validation" method="post" action="#" novalidate>
           <div class="form-group">
             <label for="userEmail">Email: </label>
             <input type="email" name="email" class="form-control" placeholder="abc@abc.com" id="userEmail"
-              aria-describedby="emailHelp">
+              aria-describedby="emailHelp" required>
             <small id="emailHelp" class="form-text text-muted"><i class="fas text-primary fa-info"></i> We'll never share your email with anyone else.</small>
+            <div class="valid-feedback">
+              <i class="far text-success fa-thumbs-up"></i> OK
+            </div>
+            <div class="invalid-feedback">
+              <i class="fas text-danger fa-exclamation-triangle"></i> Some error in email.
+            </div>
           </div>
           <div class="form-group">
             <label for="userPassword">Password: </label>
             <input type="password" class="form-control" placeholder="******" name="password" id="userPassword"
-              aria-describedby="passwordHelp">
+              aria-describedby="passwordHelp" required minlength="6">
             <small id="passwordHelp" class="form-text text-muted"><i class="fas text-primary fa-info"></i> Password must be at least 6 characters.</small>
+            <div class="valid-feedback">
+              <i class="far text-success fa-thumbs-up"></i> OK
+            </div>
+            <div class="invalid-feedback">
+              <i class="fas text-danger fa-exclamation-triangle"></i> Some error in password.
+            </div>
           </div>
           <button type="submit" class="btn btn-warning w-100 shadow btn-sm rounded">Sign in</button>
         </form> <!-- Login Form Ends -->
@@ -208,6 +220,27 @@
   <script src="js/bootstrap-drawer.min.js"></script>
   <!-- Custom JavaScript -->
   <script src="js/custom.js"></script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function() {
+      'use strict';
+      window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function(form) {
+          form.addEventListener('submit', function(event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+    </script>
 </body>
 
 </html>
