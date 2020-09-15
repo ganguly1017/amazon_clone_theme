@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
-  <title>Amazon : Your Account</title>
+  <title>Amazon : Your Orders</title>
 </head>
 
 <body>
@@ -156,54 +156,166 @@
     </div>
   </nav> <!-- Navbar Ends -->
 
-  <!-- Your Account Starts -->
-  <div class="container mt-5">
-    <h2>Your Account</h2>
-    <!-- Account Panel Starts -->
+  <div class="container">
+    <!-- URL Breadcrumb Starts -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent ml-n3">
+        <li class="breadcrumb-item"><a href="your_account.html">Your Accout</a></li>
+        <li class="breadcrumb-item active text-danger" aria-current="page">Your Orders</li>
+      </ol>
+    </nav> <!-- URL Breadcrumb Ends -->
+
+    <!-- Search Orders Starts -->
     <div class="row">
       <div class="col-md-4">
-        <a href="your_orders.html" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-shopping-bag"></i>
-                <span class="h4">Your Orders</span>
-              </div>
-              <small class="text-muted">Track, return or buy things again.</small>
+        <h3>Your Orders</h3>
+      </div>
+      <div class="col-md-8">
+        <form class="form-inline float-md-right">
+          <div class="input-group">
+            <div class="input-group-prepend">
+              <button type="button" class="btn btn-dark">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+            <input type=text class="form-control" name="orderName" id="orderName" />
+            <div class="input-group-append">
+              <button type="submit" class="btn btn-dark">Search orders</button>
             </div>
           </div>
-        </a>
+        </form>
       </div>
+    </div> <!-- Search Orders Starts -->
 
-      <div class="col-md-4">
-        <a href="change_password.html" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-key"></i>
-                <span class="h4">Password Change</span>
-              </div>
-              <small class="text-muted">Change your password.</small>
-            </div>
+    <!-- Order Card Starts -->
+    <div class="card mt-5">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0">order placed</p>
+            <p class="text-uppercase text-muted my-0">15 September 2020</p>
           </div>
-        </a>
-      </div>
 
-      <div class="col-md-4">
-        <a href="#" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-map-marked-alt"></i>
-                <span class="h4">Your Addresses</span>
-              </div>
-              <small class="text-muted">Edit addresses for orders.</small>
-            </div>
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0">total</p>
+            <p class="text-uppercase text-muted my-0">
+              <i class="fas fa-rupee-sign"></i> 150
+            </p>
           </div>
-        </a>
+
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0 float-md-right">order # X55SEDHRz9K5TYz6</p>
+          </div>
+        </div>
       </div>
-    </div> <!-- Account Panel Starts -->
-  </div> <!-- Your Account Ends -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-1">
+            <img src="img/product_images/product01.png" width="58" height="90" alt="product 01 image">
+          </div>
+
+          <div class="col-md-5">
+            <a href="#">Oppo Mobile A56</a>
+            <p class="text-muted my-0">Sold by : Narendra Modi</p>
+            <p class="text-uppercase my-0">
+              <i class="fas fa-rupee-sign"></i> <span class="text-danger">150</span>
+            </p>
+          </div>
+
+          <div class="col-md-6 d-flex flex-column">
+            <a href="#" class="btn btn-outline-secondary btn-sm w-50 ml-auto my-1">Cancel Order</a>
+            <a href="#" class="btn btn-outline-info btn-sm w-50 ml-auto my-1">Generate Invoice</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Order Card Starts -->
+
+    <!-- Order Card Starts -->
+    <div class="card mt-5">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0">order placed</p>
+            <p class="text-uppercase text-muted my-0">15 September 2020</p>
+          </div>
+
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0">total</p>
+            <p class="text-uppercase text-muted my-0">
+              <i class="fas fa-rupee-sign"></i> 150
+            </p>
+          </div>
+
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0 float-md-right">order # X55SEDHRz9K5TYz6</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-1">
+            <img src="img/product_images/product01.png" width="58" height="90" alt="product 01 image">
+          </div>
+
+          <div class="col-md-5">
+            <a href="#">Oppo Mobile A56</a>
+            <p class="text-muted my-0">Sold by : Narendra Modi</p>
+            <p class="text-uppercase my-0">
+              <i class="fas fa-rupee-sign"></i> <span class="text-danger">150</span>
+            </p>
+          </div>
+
+          <div class="col-md-6 d-flex flex-column">
+            <a href="#" class="btn btn-outline-secondary btn-sm w-50 ml-auto my-1">Cancel Order</a>
+            <a href="#" class="btn btn-outline-info btn-sm w-50 ml-auto my-1">Generate Invoice</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Order Card Starts -->
+
+    <!-- Order Card Starts -->
+    <div class="card mt-5">
+      <div class="card-header">
+        <div class="row">
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0">order placed</p>
+            <p class="text-uppercase text-muted my-0">15 September 2020</p>
+          </div>
+
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0">total</p>
+            <p class="text-uppercase text-muted my-0">
+              <i class="fas fa-rupee-sign"></i> 150
+            </p>
+          </div>
+
+          <div class="col-md-4 mt-3 mt-md-0">
+            <p class="text-uppercase text-muted my-0 float-md-right">order # X55SEDHRz9K5TYz6</p>
+          </div>
+        </div>
+      </div>
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-1">
+            <img src="img/product_images/product01.png" width="58" height="90" alt="product 01 image">
+          </div>
+
+          <div class="col-md-5">
+            <a href="#">Oppo Mobile A56</a>
+            <p class="text-muted my-0">Sold by : Narendra Modi</p>
+            <p class="text-uppercase my-0">
+              <i class="fas fa-rupee-sign"></i> <span class="text-danger">150</span>
+            </p>
+          </div>
+
+          <div class="col-md-6 d-flex flex-column">
+            <a href="#" class="btn btn-outline-secondary btn-sm w-50 ml-auto my-1">Cancel Order</a>
+            <a href="#" class="btn btn-outline-info btn-sm w-50 ml-auto my-1">Generate Invoice</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Order Card Starts -->
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
