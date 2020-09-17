@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
-  <title>Amazon : Your Addresses</title>
+  <title>Amazon : Navbar</title>
 </head>
 
 <body>
@@ -156,70 +156,160 @@
     </div>
   </nav> <!-- Navbar Ends -->
 
-  <div class="container">
+  <!-- New Address Form Starts -->
+  <div class="container w-50 mt-5 mb-5">
     <!-- URL Breadcrumb Starts -->
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb bg-transparent ml-n3">
         <li class="breadcrumb-item"><a href="your_account.html">Your Account</a></li>
-        <li class="breadcrumb-item active text-danger" aria-current="page">Your Addresses</li>
+        <li class="breadcrumb-item"><a href="your_addresses.html">Your Addresses</a></li>
+        <li class="breadcrumb-item active text-danger" aria-current="page">New Address</li>
       </ol>
     </nav> <!-- URL Breadcrumb Ends -->
 
-    <h3>Your Addresses</h3>
+    <h3 class="font-weight-bold">Add a new address</h3>
+    <p class="font-weight-bold">Or pick up your packages at your convenience from our self-service locations.</p>
 
-    <!-- Address Card -->
-    <div class="row">
-      <div class="col-md-4 my-md-0 my-2">
-        <a href="add_new_address.html" class="btn bg-transparent m-0 p-0">
-          <div class="card" style="width: 320px; height: 266px;border: 2px dashed #C7C7C7; ">
-            <div class="card-body mt-5">
-              <i class="fas fa-plus fa-3x" style="color: #C7C7C7;"></i>
-              <h5 class="card-title">Add address</h5>
-            </div>
-          </div>
-        </a>
-      </div>
-      <div class="col-md-4 my-md-0 my-2">
-        <div class="card" >
-          <div class="card-header bg-transparent">
-            <p class="text-muted p-0 m-0">Default: <i class="fab fa-amazon"></i></p>
-          </div>
-          <div class="card-body m-0 pt-1">
-            <p class="font-weight-bold my-0 py-0">Sandeep Ganguly</p>
-            <p class="my-0 py-0">House No. 123</p>
-            <p class="my-0 py-0">ABC</p>
-            <p class="my-0 py-0">Kanpur, Uttar Pradesh 123456</p>
-            <p class="my-0 py-0">India</p>
-            <p class="my-0 py-0">Phone Number: 1234567890</p>
-          </div>
-          <div class="card-footer bg-transparent">
-            <a href="#" class="btn btn-outline-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
-            <a href="#" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
-          </div>
+    <!-- New Address Form Starts -->
+    <form class="w-85 mx-auto font-weight-bold needs-validation" autocomplete="off" method="post" novalidate>
+      <div class="form-group">
+        <label for="country">Country/Region</label>
+        <select class="form-control" id="country" name="country" required>
+          <option value="0">India</option>
+          <option value="1">Pakistan</option>
+          <option value="2">Bangladesh</option>
+          <option value="3">Nepal</option>
+          <option value="4">Sri Lanka</option>
+        </select>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in Country/Region.
         </div>
       </div>
 
-      <div class="col-md-4 my-md-0 my-2">
-        <div class="card" >
-          <div class="card-header bg-transparent">
-            <p class="text-muted p-0 m-0">Default: <i class="fab fa-amazon"></i></p>
-          </div>
-          <div class="card-body m-0 pt-1">
-            <p class="font-weight-bold my-0 py-0">Sandeep Ganguly</p>
-            <p class="my-0 py-0">House No. 123</p>
-            <p class="my-0 py-0">ABC</p>
-            <p class="my-0 py-0">Kanpur, Uttar Pradesh 123456</p>
-            <p class="my-0 py-0">India</p>
-            <p class="my-0 py-0">Phone Number: 1234567890</p>
-          </div>
-          <div class="card-footer bg-transparent">
-            <a href="#" class="btn btn-outline-info btn-sm"><i class="fas fa-pencil-alt"></i></a>
-            <a href="#" class="btn btn-outline-danger btn-sm"><i class="fas fa-trash-alt"></i></a>
-          </div>
+      <div class="form-group">
+        <label for="username">Full name</label>
+        <input type="text" class="form-control" id="username" name="username" required>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in full name.
         </div>
       </div>
-    </div>
-  </div>
+
+      <div class="form-group">
+        <label for="mobileNumber">Mobile number</label>
+        <input type="text" class="form-control" id="mobileNumber" name="mobileNumber"
+          placeholder="10-digit mobile number without prefixes" required>
+        <small>May be used to assist delivery</small>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in mobile number.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="pincode">PIN code</label>
+        <input type="text" class="form-control" id="pincode" name="pincode" placeholder="6 digit [0-9] PIN Code"
+          required>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in PIN code.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="houseNumber">Flat, House no., Building, Company, Apartment</label>
+        <input type="text" class="form-control" id="houseNumber" name="houseNumber" required>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in Flat no.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="area">Area, Colony, Street, Sector, Village</label>
+        <input type="text" class="form-control" id="area" name="area" required>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in area.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="landmark">Landmark</label>
+        <input type="text" class="form-control" id="landmark" name="landmark"
+          placeholder="E.g. Near AIIMS Flyover, Behind Regal Cinema, etc." required>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in landmark.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="city">Town/City</label>
+        <input type="text" class="form-control" id="city" name="city" required>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in town/city.
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="state">State / Province / Region</label>
+        <select class="form-control" id="state" name="state" required>
+          <option value="0">India</option>
+          <option value="1">Pakistan</option>
+          <option value="2">Bangladesh</option>
+          <option value="3">Nepal</option>
+          <option value="4">Sri Lanka</option>
+        </select>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in state.
+        </div>
+      </div>
+
+      <h5>Add delivery instructions</h5>
+      <p>Preferences are used to plan your delivery. However, shipments can sometimes arrive early or later than
+        planned.</p>
+
+      <div class="form-group">
+        <label for="addressType">Address Type</label>
+        <select class="form-control" id="addressType" name="addressType" required>
+          <option value="0">Select an Address Type</option>
+          <option value="1">Home (7 am – 9 pm delivery)</option>
+          <option value="2">Office/Commercial (10 AM - 6 PM delivery)</option>
+        </select>
+        <div class="valid-feedback">
+          <i class="far text-success fa-thumbs-up"></i> OK
+        </div>
+        <div class="invalid-feedback">
+          <i class="fas text-danger fa-exclamation-triangle"></i> Some error in address type.
+        </div>
+      </div>
+
+      <button type="submit" class="btn btn-warning shadow rounded">Add address</button>
+    </form>
+
+  </div> <!-- New Address Form Starts -->
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -236,6 +326,27 @@
   <script src="js/bootstrap-drawer.min.js"></script>
   <!-- Custom JavaScript -->
   <script src="js/custom.js"></script>
+
+  <script>
+    // Example starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+      'use strict';
+      window.addEventListener('load', function () {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        var forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        var validation = Array.prototype.filter.call(forms, function (form) {
+          form.addEventListener('submit', function (event) {
+            if (form.checkValidity() === false) {
+              event.preventDefault();
+              event.stopPropagation();
+            }
+            form.classList.add('was-validated');
+          }, false);
+        });
+      }, false);
+    })();
+  </script>
 </body>
 
 </html>
