@@ -1,0 +1,524 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Amazon FavIcon -->
+  <link rel="icon" href="img/amazon_favicon.ico" image="image/gif" size="16x16">
+  <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+  <!-- Font Awesome CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <!-- Bootstrap CSS Local -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Drawer CSS File -->
+  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Amazon : Review Order</title>
+</head>
+
+<body>
+  <!-- Navbar Starts -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- Drawer Start -->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazonDrawer">
+      <i class="fas fa-sliders-h"></i>
+    </button>
+
+    <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+      aria-hidden="true" id="amazonDrawer">
+      <div class="drawer-content drawer-content-scrollable" role="document">
+        <div class="drawer-header bg-dark text-white">
+          <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+            <i class="fas fa-user-circle"></i>
+            Hello, Sign In
+          </h4>
+        </div>
+        <div class="drawer-body">
+          <h6 class="text-muted text-uppercase">Help & Settings</h6>
+          <a href="your_account.html" class="btn btn-outline-success my-2 btn-sm">You Account</a>
+          <a href="login.html" class="btn btn-warning my-2  btn-sm">Sign in</a>
+        </div>
+        <div class="drawer-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
+            <i class="fas fa-2x fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div> <!-- Drawer Ends -->
+
+    <a class="navbar-brand pl-2" href="navbar.html">
+      <img src="img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Search Bar Starts -->
+      <form class="form-inline px-lg-5" novalidate method="get">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+                <a class="dropdown-item" href="#">Kitchen Hardware</a>
+                <a class="dropdown-item" href="#">Prime Deals</a>
+                <a class="dropdown-item" href="#">Book</a>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="form-control" size="50" name="query" id="query">
+          <input type="text" name="category" id="category" value="book" hidden>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-warning">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form> <!-- Search Bar Ends -->
+      <ul class="navbar-nav">
+        <!-- Preffered Language Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="#" id="prefLanguageDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-language"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+            <form class="p-3">
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english"
+                  checked>
+                <label class="custom-control-label" for="englishLang">
+                  <img src="img/flag/english.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="hindi" checked>
+                <label class="custom-control-label" for="hindiLang">
+                  <img src="img/flag/hindi.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="urduLang" value="urdu" checked>
+                <label class="custom-control-label" for="urduLang">
+                  <img src="img/flag/urdu.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLang" id="banglaLang" value="bangla" checked>
+                <label class="custom-control-label" for="banglaLang">
+                  <img src="img/flag/bangla.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+            </form>
+          </div>
+        </li> <!-- Preffered Language Ends -->
+        <!-- User Account Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+            <div class="d-flex flex-column justify-content-center">
+              <a href="login.html" class="btn btn-warning w-75 btn-sm font-weight-bold">Signin</a>
+              <small>New customer?<a href="register.html"> Start here.</a></small>
+            </div>
+          </div>
+        </li> <!-- User Account Ends -->
+        <!-- Shopping Cart Starts -->
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#"" aria-disabled=" true">
+            <i class="fas fa-2x text-light fa-shopping-cart"></i>
+            <span class="badge badge-warning badge-pill">0</span>
+          </a>
+        </li> <!-- Shopping Cart Starts -->
+      </ul>
+    </div>
+  </nav> <!-- Navbar Ends -->
+
+  <!-- Review Order Starts -->
+  <div class="container my-5">
+
+    <!-- Progress Status -->
+    <div class="d-flex flex-column">
+      <!-- Cart Movement -->
+      <div class="d-flex flex-row text-uppercase justify-content-around" style="font-size: 12px;">
+        <p></p>
+        <p></p>
+        <p class="mb-0 pb-0"><i class="fas fa-cart-arrow-down fa-3x text-success"></i></p>
+        <p></p>
+      </div>
+
+      <!-- Progress bar starts -->
+      <div class="progress" style="height: 5px;">
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+          style="width: 25%; background-color: #e47911;"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+          style="width: 25%; background-color: #e47911;"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+          style="width: 12.5%; background-color: #e47911;"></div>
+        <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar"
+          style="width: 0%; background-color: #e47911;"></div>
+      </div>
+
+      <div class="d-flex flex-row text-uppercase justify-content-around" style="font-size: 12px;">
+        <p>sing in</p>
+        <p class="font-weight-bold">delivery & payment</p>
+        <p class="text-muted">place order</p>
+        <p class="text-muted">complete payment</p>
+      </div>
+    </div> <!-- Progress Status ends -->
+
+    <h3>Review your order </h3>
+    <p>By placing your order, you agree to Amazon's privacy notice and conditions of use.</p>
+    <div class="dropdown-divider"></div>
+
+
+    <div class="row">
+      <!-- Product details -->
+      <div class="col-md-8">
+        <!-- Address & Payment Detail -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card">
+              <div class="card-body">
+                <div class="row">
+                  <!-- Shipping Address -->
+                  <div class="col-md-4" style="font-size: 15px;">
+                    <p class="font-weight-bold my-0 py-0">Shipping Address</p>
+                    <p class="my-0 py-0">Sandeep Ganguly</p>
+                    <p class="my-0 py-0">House No. 123</p>
+                    <p class="my-0 py-0">ABC</p>
+                    <p class="my-0 py-0">Kanpur, Uttar Pradesh 123456</p>
+                    <p class="my-0 py-0">India</p>
+                    <p class="my-0 py-0">Phone Number: 1234567890</p>
+                  </div>
+                  <!-- Billing Address -->
+                  <div class="col-md-4" style="font-size: 15px;">
+                    <p class="font-weight-bold my-0 py-0">Billing Address</p>
+                    <p class="my-0 py-0">Sandeep Ganguly</p>
+                    <p class="my-0 py-0">House No. 123</p>
+                    <p class="my-0 py-0">ABC</p>
+                    <p class="my-0 py-0">Kanpur, Uttar Pradesh 123456</p>
+                    <p class="my-0 py-0">India</p>
+                    <p class="my-0 py-0">Phone Number: 1234567890</p>
+                  </div>
+
+                  <!-- Payment Method -->
+                  <div class="col-md-4 text-center" style="font-size: 15px;">
+                    <p class="font-weight-bold my-0 py-0">Payment Method</p>
+                    <img src="img/gpay_logo.svg" alt="gpay logo" class="mt-3" width="100" height="100">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- Address & Payment Detail ends -->
+
+        <!-- Single Order Detail Card -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+
+                  <!-- Product Image Col -->
+                  <div class="col-md-2">
+                    <img src="img/product_images/product04.png" class="img-fluid" alt="product 04 image">
+                  </div>
+
+                  <!-- Product Detail Col -->
+                  <div class="col-md-6">
+                    <a href="#">Oppo Mobile A56</a>
+                    <p class="text-muted my-0">Sold by : Narendra Modi</p>
+                    <p class="text-muted my-0">Paperback</p>
+                    <p class="text-uppercase font-weight-bold my-0 text-danger">
+                      <i class="fas fa-rupee-sign" style="font-size: 10px;"></i> <span>150.00</span>
+                    </p>
+                    <div class="d-flex flex-row mt-2">
+                      <!-- Quatinty select -->
+                      <div class="input-group" style="width: 90px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-info btn-sm">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-sm" name="quantity" value="1" id="quantity"
+                          disabled>
+                        <div class="input-group-append">
+                          <button class="btn btn-info btn-sm">+</button>
+                        </div>
+                      </div>
+
+                      <!-- Delete product from list -->
+                      <a href="#" class="ml-2">Delete</a>
+                    </div>
+                  </div> <!-- Product Detail Col ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- Single Order Detail Card ends -->
+
+
+        <!-- Single Order Detail Card -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+
+                  <!-- Product Image Col -->
+                  <div class="col-md-2">
+                    <img src="img/product_images/product05.png" class="img-fluid" alt="product 05 image">
+                  </div>
+
+                  <!-- Product Detail Col -->
+                  <div class="col-md-6">
+                    <a href="#">Oppo Mobile A56</a>
+                    <p class="text-muted my-0">Sold by : Narendra Modi</p>
+                    <p class="text-muted my-0">Paperback</p>
+                    <p class="text-uppercase font-weight-bold my-0 text-danger">
+                      <i class="fas fa-rupee-sign" style="font-size: 10px;"></i> <span>150.00</span>
+                    </p>
+                    <div class="d-flex flex-row mt-2">
+                      <!-- Quatinty select -->
+                      <div class="input-group" style="width: 90px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-info btn-sm">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-sm" name="quantity" value="1" id="quantity"
+                          disabled>
+                        <div class="input-group-append">
+                          <button class="btn btn-info btn-sm">+</button>
+                        </div>
+                      </div>
+
+                      <!-- Delete product from list -->
+                      <a href="#" class="ml-2">Delete</a>
+                    </div>
+                  </div> <!-- Product Detail Col ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- Single Order Detail Card ends -->
+
+
+        <!-- Single Order Detail Card -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+
+                  <!-- Product Image Col -->
+                  <div class="col-md-2">
+                    <img src="img/product_images/product04.png" class="img-fluid" alt="product 04 image">
+                  </div>
+
+                  <!-- Product Detail Col -->
+                  <div class="col-md-6">
+                    <a href="#">Oppo Mobile A56</a>
+                    <p class="text-muted my-0">Sold by : Narendra Modi</p>
+                    <p class="text-muted my-0">Paperback</p>
+                    <p class="text-uppercase font-weight-bold my-0 text-danger">
+                      <i class="fas fa-rupee-sign" style="font-size: 10px;"></i> <span>150.00</span>
+                    </p>
+                    <div class="d-flex flex-row mt-2">
+                      <!-- Quatinty select -->
+                      <div class="input-group" style="width: 90px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-info btn-sm">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-sm" name="quantity" value="1" id="quantity"
+                          disabled>
+                        <div class="input-group-append">
+                          <button class="btn btn-info btn-sm">+</button>
+                        </div>
+                      </div>
+
+                      <!-- Delete product from list -->
+                      <a href="#" class="ml-2">Delete</a>
+                    </div>
+                  </div> <!-- Product Detail Col ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- Single Order Detail Card ends -->
+
+
+        <!-- Single Order Detail Card -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+
+                  <!-- Product Image Col -->
+                  <div class="col-md-2">
+                    <img src="img/product_images/product04.png" class="img-fluid" alt="product 04 image">
+                  </div>
+
+                  <!-- Product Detail Col -->
+                  <div class="col-md-6">
+                    <a href="#">Oppo Mobile A56</a>
+                    <p class="text-muted my-0">Sold by : Narendra Modi</p>
+                    <p class="text-muted my-0">Paperback</p>
+                    <p class="text-uppercase font-weight-bold my-0 text-danger">
+                      <i class="fas fa-rupee-sign" style="font-size: 10px;"></i> <span>150.00</span>
+                    </p>
+                    <div class="d-flex flex-row mt-2">
+                      <!-- Quatinty select -->
+                      <div class="input-group" style="width: 90px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-info btn-sm">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-sm" name="quantity" value="1" id="quantity"
+                          disabled>
+                        <div class="input-group-append">
+                          <button class="btn btn-info btn-sm">+</button>
+                        </div>
+                      </div>
+
+                      <!-- Delete product from list -->
+                      <a href="#" class="ml-2">Delete</a>
+                    </div>
+                  </div> <!-- Product Detail Col ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- Single Order Detail Card ends -->
+
+        <!-- Single Order Detail Card -->
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card mt-3">
+              <div class="card-body">
+                <div class="row">
+
+                  <!-- Product Image Col -->
+                  <div class="col-md-2">
+                    <img src="img/product_images/product04.png" class="img-fluid" alt="product 04 image">
+                  </div>
+
+                  <!-- Product Detail Col -->
+                  <div class="col-md-6">
+                    <a href="#">Oppo Mobile A56</a>
+                    <p class="text-muted my-0">Sold by : Narendra Modi</p>
+                    <p class="text-muted my-0">Paperback</p>
+                    <p class="text-uppercase font-weight-bold my-0 text-danger">
+                      <i class="fas fa-rupee-sign" style="font-size: 10px;"></i> <span>150.00</span>
+                    </p>
+                    <div class="d-flex flex-row mt-2">
+                      <!-- Quatinty select -->
+                      <div class="input-group" style="width: 90px;">
+                        <div class="input-group-prepend">
+                          <button class="btn btn-info btn-sm">-</button>
+                        </div>
+                        <input type="text" class="form-control form-control-sm" name="quantity" value="1" id="quantity"
+                          disabled>
+                        <div class="input-group-append">
+                          <button class="btn btn-info btn-sm">+</button>
+                        </div>
+                      </div>
+
+                      <!-- Delete product from list -->
+                      <a href="#" class="ml-2">Delete</a>
+                    </div>
+                  </div> <!-- Product Detail Col ends -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> <!-- Single Order Detail Card ends -->
+
+      </div> <!-- Product details ends -->
+
+      <!-- Place your order & pay -->
+      <div class="col-md-4">
+        <div class="card mt-md-0 mt-3">
+          <div class="card-body">
+            <button class="btn btn-sm btn-warning btn-block text-capitalize">place your order and pay</button>
+            <p class="text-muted mt-2">You'll be securely redirected to Visa to enter your password and complete your
+              purchase.</p>
+            <p class="my-0">Order Summary</p>
+            <p style="font-size: 15px;" class="my-0">Items:
+              <span class="float-right">
+                <i class="fas fa-rupee-sign"></i>
+                600.00
+              </span>
+            </p>
+            <p style="font-size: 15px;" class="my-0">Delivery:
+              <span class="float-right">
+                <i class="fas fa-rupee-sign"></i>
+                0.00
+              </span>
+            </p>
+
+            <div class="dropdown-divider"></div>
+            <p class="my-0 text-danger font-weight-bold">Order Total:
+              <span class="float-right">
+                <i class="fas fa-rupee-sign"></i>
+                600.00
+              </span>
+            </p>
+
+            <div class="dropdown-divider"></div>
+            <p class="my-0 text-danger font-weight-bold">Youe Savings:
+              <span class="float-right">
+                <i class="fas fa-rupee-sign"></i>
+                297.00 (33%)
+              </span>
+            </p>
+          </div> <!-- Card body ends -->
+
+          <div class="card-footer">
+            <a href="#">How are delivery costs calculated?</a>
+            <p>Amazon Prime Delivery has been applied to the eligible items in your order.</p>
+            <button class="btn btn-danger btn-sm btn-block">Cancel Order</button>
+          </div>
+        </div>
+      </div> <!-- Place your order & pay ends -->
+    </div>
+
+  </div> <!-- Review Order Ends -->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!-- Drawer JS File -->
+  <script src="js/bootstrap-drawer.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
