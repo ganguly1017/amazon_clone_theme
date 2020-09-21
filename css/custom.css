@@ -28,3 +28,7 @@ hr.hr-text::before {
 .breadcrumb-item + .breadcrumb-item::before {
   content: ">";
 }
+
+.rating:hover {
+  color: #ffa41c;
+}
