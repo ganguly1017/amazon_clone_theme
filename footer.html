@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Amazon FavIcon -->
+  <link rel="icon" href="img/amazon_favicon.ico" image="image/gif" size="16x16">
+  <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+  <!-- Font Awesome CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <!-- Bootstrap CSS Local -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Drawer CSS File -->
+  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Amazon : Footer</title>
+</head>
+
+<body>
+  <!-- Navbar Starts -->
+  <nav id="pageTop" class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- Drawer Start -->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazonDrawer">
+      <i class="fas fa-sliders-h"></i>
+    </button>
+
+    <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+      aria-hidden="true" id="amazonDrawer">
+      <div class="drawer-content drawer-content-scrollable" role="document">
+        <div class="drawer-header bg-dark text-white">
+          <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+            <i class="fas fa-user-circle"></i>
+            Hello, Sign In
+          </h4>
+        </div>
+        <div class="drawer-body">
+          <h6 class="text-muted text-uppercase">Help & Settings</h6>
+          <a href="your_account.html" class="btn btn-outline-success my-2 btn-sm">You Account</a>
+          <a href="login.html" class="btn btn-warning my-2  btn-sm">Sign in</a>
+        </div>
+        <div class="drawer-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
+            <i class="fas fa-2x fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div> <!-- Drawer Ends -->
+
+    <a class="navbar-brand pl-2" href="navbar.html">
+      <img src="img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Search Bar Starts -->
+      <form class="form-inline px-lg-5" novalidate method="get">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+                <a class="dropdown-item" href="#">Kitchen Hardware</a>
+                <a class="dropdown-item" href="#">Prime Deals</a>
+                <a class="dropdown-item" href="#">Book</a>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="form-control" size="50" name="query" id="query">
+          <input type="text" name="category" id="category" value="book" hidden>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-warning">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form> <!-- Search Bar Ends -->
+      <ul class="navbar-nav">
+        <!-- Preffered Language Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="#" id="prefLanguageDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-language"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+            <form class="p-3">
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english"
+                  checked>
+                <label class="custom-control-label" for="englishLang">
+                  <img src="img/flag/english.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="hindi" checked>
+                <label class="custom-control-label" for="hindiLang">
+                  <img src="img/flag/hindi.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="urduLang" value="urdu" checked>
+                <label class="custom-control-label" for="urduLang">
+                  <img src="img/flag/urdu.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLang" id="banglaLang" value="bangla" checked>
+                <label class="custom-control-label" for="banglaLang">
+                  <img src="img/flag/bangla.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+            </form>
+          </div>
+        </li> <!-- Preffered Language Ends -->
+        <!-- User Account Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+            <div class="d-flex flex-column justify-content-center">
+              <a href="login.html" class="btn btn-warning w-75 btn-sm font-weight-bold">Signin</a>
+              <small>New customer?<a href="register.html"> Start here.</a></small>
+            </div>
+          </div>
+        </li> <!-- User Account Ends -->
+        <!-- Shopping Cart Starts -->
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#"" aria-disabled=" true">
+            <i class="fas fa-2x text-light fa-shopping-cart"></i>
+            <span class="badge badge-warning badge-pill">0</span>
+          </a>
+        </li> <!-- Shopping Cart Starts -->
+      </ul>
+    </div>
+  </nav> <!-- Navbar Ends -->
+
+
+  <div class="container-fluid px-0">
+
+    <!-- Image Slider Starts -->
+    <div id="amazonImageSlider" class="carousel slide" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <a href="https://www.google.com"><img src="img/slider/slide01.png" class="d-block w-100" height="500" alt="slide image 01"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.google.com"><img src="img/slider/slide02.png" class="d-block w-100" height="500" alt="slide image 02"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.google.com"><img src="img/slider/slide03.png" class="d-block w-100" height="500" alt="slide image 03"></a>
+        </div>
+        <div class="carousel-item ">
+          <a href="https://www.google.com"><img src="img/slider/slide04.png" class="d-block w-100" height="500" alt="slide image 04"></a>
+        </div>
+        <div class="carousel-item">
+          <a href="https://www.google.com"><img src="img/slider/slide05.png" class="d-block w-100" height="500" alt="slide image 05"></a>
+        </div>
+      </div>
+      <a class="carousel-control-prev" href="#amazonImageSlider" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#amazonImageSlider" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div> <!-- Image Slider Ends -->
+
+
+    <div class="container mb-5" style="margin-top: -200px;">
+      <!-- Prouct Row Starts -->
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product02.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 150.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product03.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 650.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product03.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 550.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product02.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 750.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Prouct Row Ends -->
+
+
+      <!-- Prouct Row Starts -->
+      <div class="row mt-md-4 mt-0">
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product02.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 150.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product03.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 650.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product03.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 550.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="card my-2 my-lg-0">
+            <div class="card-body d-flex justify-content-center">
+              <a href="#"><img src="img/product_images/product02.png" alt="product image 01" class="img-fluid"></a>
+            </div>
+            <div class="card-footer bg-transparent py-0">
+              <div class="row my-1">
+                <div class="col-md-6">
+                  <p class="font-weight-bold text-danger">
+                    <i class="fas fa-rupee-sign"></i> 750.00
+                  </p>
+                </div>
+                <div class="col-md-6">
+                  <a href="#" class="btn btn-success btn-sm btn-block">Buy</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div> <!-- Prouct Row Ends -->
+    </div>
+
+  </div>
+
+  <!-- Footer Starts -->
+  <div class="container-fluid bg-dark px-0">
+    <a href="#pageTop" class="btn btn-dark btn-block mb-5">Back to Top</a>
+    
+    <div class="container">
+      <div class="row text-white mb-5">
+
+        <div class="col-md-3">
+          <h5>Get to know us</h5>
+          <a href="#" class="text-white">About</a> <br />
+          <a href="#" class="text-white">Careers</a> <br />
+          <a href="#" class="text-white">Press Release</a> <br />
+          <a href="#" class="text-white">Investment</a> <br />
+          <a href="#" class="text-white">Offers</a> <br />
+        </div>
+
+        <div class="col-md-3">
+          <h5>Connect With Us</h5>
+          <a href="#" class="text-white">Facebook</a> <br />
+          <a href="#" class="text-white">Twitter</a> <br />
+          <a href="#" class="text-white">Instagram</a> <br />
+        </div>
+
+        <div class="col-md-3">
+          <h5>Make Money With Us</h5>
+          <a href="#" class="text-white">Sell on Amazon</a> <br />
+          <a href="#" class="text-white">Affiliate Marketing</a> <br />
+          <a href="#" class="text-white">Fullfilment Center</a> <br />
+          <a href="#" class="text-white">Advertise Your Product</a> <br />
+          <a href="#" class="text-white">Amazon Pay</a> <br />
+        </div>
+
+        <div class="col-md-3">
+          <h5>Let Us Help You</h5>
+          <a href="#" class="text-white">COVID 19</a> <br />
+          <a href="#" class="text-white">Your Account</a> <br />
+          <a href="#" class="text-white">Returns</a> <br />
+          <a href="#" class="text-white">Funding</a> <br />
+          <a href="#" class="text-white">Help</a> <br />
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dropdown-divider mt-3"></div>
+
+    <div class="row mt-3 mx-0 px-0">
+      <div class="col-md-12 text-center">
+        <img src="img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white footer">
+      </div>
+    </div>
+
+
+    <!-- Sub footer starts -->
+    <div class="py-3 mt-3 shadow-lg" style="background-color: #131a22; font-size: 12px;"> 
+      <div class="container">
+
+        <div class="row text-white">
+
+          <div class="col-md-3">
+            <p>Get to know us</p>
+            <a href="#" class="text-white">About</a> <br />
+            <a href="#" class="text-white">Careers</a> <br />
+            <a href="#" class="text-white">Press Release</a> <br />
+            <a href="#" class="text-white">Investment</a> <br />
+            <a href="#" class="text-white">Offers</a> <br />
+          </div>
+  
+          <div class="col-md-3">
+            <p>Connect With Us</p>
+            <a href="#" class="text-white">Facebook</a> <br />
+            <a href="#" class="text-white">Twitter</a> <br />
+            <a href="#" class="text-white">Instagram</a> <br />
+          </div>
+  
+          <div class="col-md-3">
+            <p>Make Money With Us</p>
+            <a href="#" class="text-white">Sell on Amazon</a> <br />
+            <a href="#" class="text-white">Affiliate Marketing</a> <br />
+            <a href="#" class="text-white">Fullfilment Center</a> <br />
+            <a href="#" class="text-white">Advertise Your Product</a> <br />
+            <a href="#" class="text-white">Amazon Pay</a> <br />
+          </div>
+  
+          <div class="col-md-3">
+            <p>Let Us Help You</p>
+            <a href="#" class="text-white">COVID 19</a> <br />
+            <a href="#" class="text-white">Your Account</a> <br />
+            <a href="#" class="text-white">Returns</a> <br />
+            <a href="#" class="text-white">Funding</a> <br />
+            <a href="#" class="text-white">Help</a> <br />
+          </div>
+  
+        </div>
+
+
+        <div class="row my-5">
+          <div class="col-md-12 text-center text-white">
+            <p>
+              <i class="far fa-copyright"></i> 1996-2020, Amazon.com Inc.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- Sub footer ends -->
+
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!-- Drawer JS File -->
+  <script src="js/bootstrap-drawer.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
