@@ -1,0 +1,464 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Amazon FavIcon -->
+  <link rel="icon" href="img/amazon_favicon.ico" image="image/gif" size="16x16">
+  <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+  <!-- Font Awesome CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <!-- Bootstrap CSS Local -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Drawer CSS File -->
+  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Amazon : Navbar</title>
+</head>
+
+<body>
+  <!-- Navbar Starts -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- Drawer Start -->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazonDrawer">
+      <i class="fas fa-sliders-h"></i>
+    </button>
+
+    <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+      aria-hidden="true" id="amazonDrawer">
+      <div class="drawer-content drawer-content-scrollable" role="document">
+        <div class="drawer-header bg-dark text-white">
+          <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+            <i class="fas fa-user-circle"></i>
+            Hello, Sign In
+          </h4>
+        </div>
+        <div class="drawer-body">
+          <h6 class="text-muted text-uppercase">Help & Settings</h6>
+          <a href="your_account.html" class="btn btn-outline-success my-2 btn-sm">You Account</a>
+          <a href="login.html" class="btn btn-warning my-2  btn-sm">Sign in</a>
+        </div>
+        <div class="drawer-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
+            <i class="fas fa-2x fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div> <!-- Drawer Ends -->
+
+    <a class="navbar-brand pl-2" href="navbar.html">
+      <img src="img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Search Bar Starts -->
+      <form class="form-inline px-lg-5" novalidate method="get">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+                <a class="dropdown-item" href="#">Kitchen Hardware</a>
+                <a class="dropdown-item" href="#">Prime Deals</a>
+                <a class="dropdown-item" href="#">Book</a>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="form-control" size="50" name="query" id="query">
+          <input type="text" name="category" id="category" value="book" hidden>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-warning">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form> <!-- Search Bar Ends -->
+      <ul class="navbar-nav">
+        <!-- Preffered Language Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="#" id="prefLanguageDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-language"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+            <form class="p-3">
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english"
+                  checked>
+                <label class="custom-control-label" for="englishLang">
+                  <img src="img/flag/english.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="hindi" checked>
+                <label class="custom-control-label" for="hindiLang">
+                  <img src="img/flag/hindi.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="urduLang" value="urdu" checked>
+                <label class="custom-control-label" for="urduLang">
+                  <img src="img/flag/urdu.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLang" id="banglaLang" value="bangla" checked>
+                <label class="custom-control-label" for="banglaLang">
+                  <img src="img/flag/bangla.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+            </form>
+          </div>
+        </li> <!-- Preffered Language Ends -->
+        <!-- User Account Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+            <div class="d-flex flex-column justify-content-center">
+              <a href="login.html" class="btn btn-warning w-75 btn-sm font-weight-bold">Signin</a>
+              <small>New customer?<a href="register.html"> Start here.</a></small>
+            </div>
+          </div>
+        </li> <!-- User Account Ends -->
+        <!-- Shopping Cart Starts -->
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#"" aria-disabled=" true">
+            <i class="fas fa-2x text-light fa-shopping-cart"></i>
+            <span class="badge badge-warning badge-pill">0</span>
+          </a>
+        </li> <!-- Shopping Cart Starts -->
+      </ul>
+    </div>
+  </nav> <!-- Navbar Ends -->
+
+  <!-- Seller Profile -->
+  <div class="container my-5">
+
+    <!-- Top row -->
+    <div class="row">
+      <!-- Seller Accont Details -->
+      <div class="col-md-8">
+        <h3>Appario Retail Private Ltd</h3>
+        <p>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star-half-alt text-warning"></i>
+          <span class="font-weight-bold">88%</span> postive reviews
+        </p>
+        <p>Appario Retail Private Ltd is committed to providing each
+          customer with the highest standard of customer service.</p>
+      </div>
+
+      <!-- Ask a question to sellers -->
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem; background-color: #f6f6f6;">
+          <div class="card-body">
+            <h5 class="card-title">Do you have a question for Appario Retail Private Ltd?</h5>
+            <a href="" class="btn btn-warning btn-sm">Ask a question</a>
+          </div>
+        </div>
+      </div>
+    </div> <!-- Top row ends -->
+
+    <!-- NavTab Starts -->
+    <div class="row my-3">
+      <div class="col-md-12">
+        <ul class="nav nav-tabs" style="background-color: #f6f6f6;" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a class="nav-link active" id="feedback-tab" data-toggle="tab" href="#feedback" role="tab"
+              aria-controls="feedback" aria-selected="true">Feedback</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#support" role="tab" aria-controls="support"
+              aria-selected="false">return, warranties and refunds</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a class="nav-link" id="shipping-tab" data-toggle="tab" href="#shipping" role="tab" aria-controls="shipping"
+              aria-selected="false">Shipping</a>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+          <!-- Feedback Panel Starts -->
+          <div class="tab-pane fade show active" id="feedback" role="tabpanel" aria-labelledby="feedback-tab">
+            <!-- Rating Row Starts -->
+            <div class="row pt-3 pl-3">
+              <!-- Star Rating Starts -->
+              <div class="col-md-2">
+                <P>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                </P>
+              </div> <!-- Star Rating Ends -->
+
+              <!-- Rating Text Starts -->
+              <div class="col-md-6">
+                <p class="font-italic mb-0">
+                  "my parcel is open so i am not happy with your this type of bad sellers."
+                </p>
+                <small class="text-muted">By s.k on 2 October, 2020.</small>
+              </div> <!-- Rating Text Ends -->
+            </div> <!-- Rating Row Ends -->
+
+
+
+            <!-- Rating Row Starts -->
+            <div class="row pt-3 pl-3">
+              <!-- Star Rating Starts -->
+              <div class="col-md-2">
+                <P>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                  <i class="far fa-star text-warning"></i>
+                  <i class="far fa-star text-warning"></i>
+                  <i class="far fa-star text-warning"></i>
+                </P>
+              </div> <!-- Star Rating Ends -->
+
+              <!-- Rating Text Starts -->
+              <div class="col-md-6">
+                <p class="font-italic mb-0">
+                  "I have no any word about described seller and that product which is given me.
+                  quality making with bass booster is outstanding. So I am giving him 5star.Thanks lo..."
+                </p>
+                <small class="text-muted">By SANJAYA KUMAR PRADHAN on 2 October, 2020. </small>
+              </div> <!-- Rating Text Ends -->
+            </div> <!-- Rating Row Ends -->
+
+
+
+            <!-- Rating Row Starts -->
+            <div class="row pt-3 pl-3">
+              <!-- Star Rating Starts -->
+              <div class="col-md-2">
+                <P>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                </P>
+              </div> <!-- Star Rating Ends -->
+
+              <!-- Rating Text Starts -->
+              <div class="col-md-6">
+                <p class="font-italic mb-0">
+                  "my parcel is open so i am not happy with your this type of bad sellers."
+                </p>
+                <small class="text-muted">By s.k on 2 October, 2020.</small>
+              </div> <!-- Rating Text Ends -->
+            </div> <!-- Rating Row Ends -->
+
+
+            <!-- Rating Row Starts -->
+            <div class="row pt-3 pl-3">
+              <!-- Star Rating Starts -->
+              <div class="col-md-2">
+                <P>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star text-warning"></i>
+                  <i class="fas fa-star-half-alt text-warning"></i>
+                </P>
+              </div> <!-- Star Rating Ends -->
+
+              <!-- Rating Text Starts -->
+              <div class="col-md-6">
+                <p class="font-italic mb-0">
+                  "my parcel is open so i am not happy with your this type of bad sellers."
+                </p>
+                <small class="text-muted">By s.k on 2 October, 2020.</small>
+              </div> <!-- Rating Text Ends -->
+            </div> <!-- Rating Row Ends -->
+
+            <div class="row mt-5">
+              <div class="col-md-12 text-center">
+                <p>
+                  <a href="#">Previous</a>
+                  <a href="#" class="ml-2">Next</a>
+                </p>
+              </div>
+            </div>
+          </div> <!-- Feedback Panel Ends -->
+
+          <!-- Support Panel Starts -->
+          <div class="tab-pane fade" id="support" role="tabpanel" aria-labelledby="support-tab">
+            <div class="mt-3 ml-3">
+              <p>Please refer to the Amazon.in Return Policy.</p>
+            </div>
+          </div> <!-- Support Panel Ends -->
+
+
+          <!-- Shipping Panel Starts -->
+          <div class="tab-pane fade" id="shipping" role="tabpanel" aria-labelledby="shipping-tab">
+            <div class="mt-3 ml-3">
+              <p>This item is Fulfilled by Amazon.in and ships based on Amazon.in Shipping Rates and Policies.</p>
+              <p>This item is Fulfilled by Amazon.in and ships based on Amazon.in Shipping Rates and Policies.</p>
+            </div>
+          </div> <!-- Shipping Panel Starts -->
+        </div>
+      </div>
+    </div> <!-- NavTab Starts ends -->
+
+  </div>
+
+
+
+
+
+  <!-- Footer Starts -->
+  <div class="container-fluid bg-dark px-0">
+    <a href="#pageTop" class="btn btn-dark btn-block mb-5">Back to Top</a>
+
+    <div class="container">
+      <div class="row text-white mb-5">
+
+        <div class="col-md-3">
+          <h5>Get to know us</h5>
+          <a href="#" class="text-white">About</a> <br />
+          <a href="#" class="text-white">Careers</a> <br />
+          <a href="#" class="text-white">Press Release</a> <br />
+          <a href="#" class="text-white">Investment</a> <br />
+          <a href="#" class="text-white">Offers</a> <br />
+        </div>
+
+        <div class="col-md-3">
+          <h5>Connect With Us</h5>
+          <a href="#" class="text-white">Facebook</a> <br />
+          <a href="#" class="text-white">Twitter</a> <br />
+          <a href="#" class="text-white">Instagram</a> <br />
+        </div>
+
+        <div class="col-md-3">
+          <h5>Make Money With Us</h5>
+          <a href="#" class="text-white">Sell on Amazon</a> <br />
+          <a href="#" class="text-white">Affiliate Marketing</a> <br />
+          <a href="#" class="text-white">Fullfilment Center</a> <br />
+          <a href="#" class="text-white">Advertise Your Product</a> <br />
+          <a href="#" class="text-white">Amazon Pay</a> <br />
+        </div>
+
+        <div class="col-md-3">
+          <h5>Let Us Help You</h5>
+          <a href="#" class="text-white">COVID 19</a> <br />
+          <a href="#" class="text-white">Your Account</a> <br />
+          <a href="#" class="text-white">Returns</a> <br />
+          <a href="#" class="text-white">Funding</a> <br />
+          <a href="#" class="text-white">Help</a> <br />
+        </div>
+
+      </div>
+    </div>
+
+    <div class="dropdown-divider mt-3"></div>
+
+    <div class="row mt-3 mx-0 px-0">
+      <div class="col-md-12 text-center">
+        <img src="img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white footer">
+      </div>
+    </div>
+
+
+    <!-- Sub footer starts -->
+    <div class="py-3 mt-3 shadow-lg" style="background-color: #131a22; font-size: 12px;">
+      <div class="container">
+
+        <div class="row text-white">
+
+          <div class="col-md-3">
+            <p>Get to know us</p>
+            <a href="#" class="text-white">About</a> <br />
+            <a href="#" class="text-white">Careers</a> <br />
+            <a href="#" class="text-white">Press Release</a> <br />
+            <a href="#" class="text-white">Investment</a> <br />
+            <a href="#" class="text-white">Offers</a> <br />
+          </div>
+
+          <div class="col-md-3">
+            <p>Connect With Us</p>
+            <a href="#" class="text-white">Facebook</a> <br />
+            <a href="#" class="text-white">Twitter</a> <br />
+            <a href="#" class="text-white">Instagram</a> <br />
+          </div>
+
+          <div class="col-md-3">
+            <p>Make Money With Us</p>
+            <a href="#" class="text-white">Sell on Amazon</a> <br />
+            <a href="#" class="text-white">Affiliate Marketing</a> <br />
+            <a href="#" class="text-white">Fullfilment Center</a> <br />
+            <a href="#" class="text-white">Advertise Your Product</a> <br />
+            <a href="#" class="text-white">Amazon Pay</a> <br />
+          </div>
+
+          <div class="col-md-3">
+            <p>Let Us Help You</p>
+            <a href="#" class="text-white">COVID 19</a> <br />
+            <a href="#" class="text-white">Your Account</a> <br />
+            <a href="#" class="text-white">Returns</a> <br />
+            <a href="#" class="text-white">Funding</a> <br />
+            <a href="#" class="text-white">Help</a> <br />
+          </div>
+
+        </div>
+
+
+        <div class="row my-5">
+          <div class="col-md-12 text-center text-white">
+            <p>
+              <i class="far fa-copyright"></i> 1996-2020, Amazon.com Inc.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div> <!-- Sub footer ends -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+      crossorigin="anonymous"></script>
+    <!-- Drawer JS File -->
+    <script src="js/bootstrap-drawer.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="js/custom.js"></script>
+</body>
+
+</html>
