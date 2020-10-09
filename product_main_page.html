@@ -1,0 +1,474 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Amazon FavIcon -->
+  <link rel="icon" href="img/amazon_favicon.ico" image="image/gif" size="16x16">
+  <!-- Bootstrap CSS
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous"> -->
+
+  <!-- Font Awesome CSS CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+    crossorigin="anonymous" />
+  <!-- Bootstrap CSS Local -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <!-- Drawer CSS File -->
+  <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/custom.css">
+  <title>Amazon : Navbar</title>
+</head>
+
+<body>
+  <!-- Navbar Starts -->
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <!-- Drawer Start -->
+    <button class="btn btn-outline-light" data-toggle="drawer" data-target="#amazonDrawer">
+      <i class="fas fa-sliders-h"></i>
+    </button>
+
+    <div class="drawer drawer-left slide" tabindex="-1" role="dialog" aria-labelledby="drawer-demo-title"
+      aria-hidden="true" id="amazonDrawer">
+      <div class="drawer-content drawer-content-scrollable" role="document">
+        <div class="drawer-header bg-dark text-white">
+          <h4 class="drawer-title mx-auto" id="drawer-demo-title">
+            <i class="fas fa-user-circle"></i>
+            Hello, Sign In
+          </h4>
+        </div>
+        <div class="drawer-body">
+          <h6 class="text-muted text-uppercase">Help & Settings</h6>
+          <a href="your_account.html" class="btn btn-outline-success my-2 btn-sm">You Account</a>
+          <a href="login.html" class="btn btn-warning my-2  btn-sm">Sign in</a>
+        </div>
+        <div class="drawer-footer">
+          <button type="button" class="btn btn-outline-danger btn-sm" data-dismiss="drawer" aria-label="Close">
+            <i class="fas fa-2x fa-times"></i>
+          </button>
+        </div>
+      </div>
+    </div> <!-- Drawer Ends -->
+
+    <a class="navbar-brand pl-2" href="navbar.html">
+      <img src="img/amazon_logo_white.png" height="30" width="100" alt="amazon logo white">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!-- Search Bar Starts -->
+      <form class="form-inline px-lg-5" novalidate method="get">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="dropdown">
+              <button class="btn btn-secondary dropdown-toggle" name="btnCategory" type="button"
+                id="btnCategoryDropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                All
+              </button>
+              <div class="dropdown-menu" aria-labelledby="btnCategoryDropdownMenu">
+                <a class="dropdown-item" href="#">All</a>
+                <a class="dropdown-item" href="#">Smartphone</a>
+                <a class="dropdown-item" href="#">Kitchen Hardware</a>
+                <a class="dropdown-item" href="#">Prime Deals</a>
+                <a class="dropdown-item" href="#">Book</a>
+              </div>
+            </div>
+          </div>
+          <input type="text" class="form-control" size="50" name="query" id="query">
+          <input type="text" name="category" id="category" value="book" hidden>
+          <div class="input-group-append">
+            <button type="submit" class="btn btn-warning">
+              <i class="fas fa-search"></i>
+            </button>
+          </div>
+        </div>
+      </form> <!-- Search Bar Ends -->
+      <ul class="navbar-nav">
+        <!-- Preffered Language Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="#" id="prefLanguageDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-language"></i>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="prefLanguageDropdown">
+            <form class="p-3">
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="englishLang" value="english"
+                  checked>
+                <label class="custom-control-label" for="englishLang">
+                  <img src="img/flag/english.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="hindiLang" value="hindi" checked>
+                <label class="custom-control-label" for="hindiLang">
+                  <img src="img/flag/hindi.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio mb-2">
+                <input class="custom-control-input" type="radio" name="prefLang" id="urduLang" value="urdu" checked>
+                <label class="custom-control-label" for="urduLang">
+                  <img src="img/flag/urdu.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="custom-control custom-radio">
+                <input class="custom-control-input" type="radio" name="prefLang" id="banglaLang" value="bangla" checked>
+                <label class="custom-control-label" for="banglaLang">
+                  <img src="img/flag/bangla.svg" alt="uk flag" width="50" height="30">
+                </label>
+              </div>
+              <div class="dropdown-divider"></div>
+            </form>
+          </div>
+        </li> <!-- Preffered Language Ends -->
+        <!-- User Account Starts -->
+        <li class="nav-item dropdown px-2">
+          <a class="nav-link" href="login.html" id="userAccount" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-2x fa-user-circle"></i>
+          </a>
+          <div class="dropdown-menu px-3" aria-labelledby="userAccount">
+            <div class="d-flex flex-column justify-content-center">
+              <a href="login.html" class="btn btn-warning w-75 btn-sm font-weight-bold">Signin</a>
+              <small>New customer?<a href="register.html"> Start here.</a></small>
+            </div>
+          </div>
+        </li> <!-- User Account Ends -->
+        <!-- Shopping Cart Starts -->
+        <li class="nav-item px-2">
+          <a class="nav-link" href="#"" aria-disabled=" true">
+            <i class="fas fa-2x text-light fa-shopping-cart"></i>
+            <span class="badge badge-warning badge-pill">0</span>
+          </a>
+        </li> <!-- Shopping Cart Starts -->
+      </ul>
+    </div>
+  </nav> <!-- Navbar Ends -->
+
+
+  <div class="container my-5">
+    <!-- Top Page Design Starts -->
+    <div class="row">
+      <!-- Image Select Button starts  -->
+      <div class="col-md-1">
+        <button class="btn btn-sm bg-transparent">
+          <img src="img/product_main/button_img01.jpg" alt="btn image">
+        </button>
+        <button class="btn btn-sm bg-transparent">
+          <img src="img/product_main/button_img02.jpg" alt="btn image">
+        </button>
+        <button class="btn btn-sm bg-transparent">
+          <img src="img/product_main/button_img01.jpg" alt="btn image">
+        </button>
+        <button class="btn btn-sm bg-transparent">
+          <img src="img/product_main/button_img01.jpg" alt="btn image">
+        </button>
+      </div> <!-- Image Select Button Ends  -->
+
+      <!-- Product Image Starts -->
+      <div class="col-md-3">
+        <img src="img/product_main/product_img01.jpg" class="img-fluid" alt="product image">
+      </div> <!-- Product Image Ends -->
+
+      <!-- Product Details Starts -->
+      <div class="col-md-4">
+        <h6 class="font-weight-bold">Redmi 8A Dual (Sea Blue, 2GB RAM, 32GB Storage) – Dual Cameras & 5,000 mAH Battery
+        </h6>
+        <p>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star text-warning"></i>
+          <i class="fas fa-star-half-alt text-warning"></i>
+        </p>
+
+        <div class="dropdown-divider mt-3"></div>
+        <p class="mb-0">
+          <span class="text-muted mr-2">M.R.P.:</span>
+          <span class="text-danger font-weight-bold"><i class="fas fa-rupee-sign"></i> 8000/-</span>
+        </p>
+        <p>
+          <span class="text-muted mr-2">You Save:</span>
+          <span class="text-danger font-weight-bold"><i class="fas fa-rupee-sign"></i> 4000/-</span>
+        </p>
+
+        <!-- Delivery Quality Images starts -->
+        <div class="row" style="font-size: 12px; font-weight: bold;">
+          <div class="col-md-3">
+            <img src="img/product_main/delivery01.svg" width="35" height="35" class="rounded" alt="" srcset="">
+            <br>
+            <a href="#">No contact delivery</a>
+          </div>
+          <div class="col-md-3">
+            <img src="img/product_main/delivery02.svg" width="35" height="35" class="rounded" alt="" srcset="">
+            <br>
+            <a href="#">7 Day Replacement</a>
+          </div>
+          <div class="col-md-3">
+            <img src="img/product_main/delivery03.svg" width="35" height="35" class="rounded" alt="" srcset="">
+            <br>
+            <a href="#">Amazon Delivered</a>
+          </div>
+          <div class="col-md-3">
+            <img src="img/product_main/delivery04.svg" width="35" height="35" class="rounded" alt="" srcset="">
+            <br>
+            <a href="#">1 Year Waranty</a>
+          </div>
+        </div> <!-- Delivery Quality Images ends -->
+
+        <div class="dropdown-divider mt-3"></div>
+
+        <p class="text-success font-weight-bold">In stock.</p>
+        <p>Sold by:
+          <a href="#">ABC Seller</a>
+        </p>
+
+        <!-- Product Description Starts -->
+        <ul class="ml-n3">
+          <li>13+2MP dual rear AI camera with PDAF | 8MP front camera</li>
+          <li>15.7988 centimeters (6.22-inch) HD+ Dot notch display with 1520 x 720 pixels resolution and 19:9 aspect
+            ratio | 2.5D curved glass</li>
+          <li>Memory, Storage & SIM: 2GB | 32GB internal memory expandable up to 512GB with dedicated memory card slot |
+            Dual SIM (nano+nano) dual-standby (4G+4G)</li>
+          <li>Android Pie v9.0 operating system with 1.95GHz Snapdragon 439 octa core processor</li>
+          <li>5000mAH lithium-polymer battery</li>
+          <li>Box also includes: Power adapter, USB cable, SIM eject tool, warranty card and user guide. The box does
+            not include earphones</li>
+        </ul> <!-- Product Description Ends -->
+
+      </div> <!-- Product Details Starts -->
+
+      <!-- Add Product Card starts -->
+      <div class="col-md-4 text-center">
+
+        <!-- Card starts -->
+        <div class="card shadow rounded float-md-right" >
+          <div class="card-body">
+            <div class="form-group">
+              <label for="quantity">Quantity:</label>
+              <select class="form-control form-control-sm d-inline ml-2" style="width: 50px;" id="quantity">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>10</option>
+              </select>
+            </div>
+
+            <p class="mb-0">
+              <span class="text-muted mr-2">M.R.P.:</span>
+              <span class="text-danger font-weight-bold"><i class="fas fa-rupee-sign"></i> 8000/-</span>
+            </p>
+
+            <a href="#" class="btn btn-warning btn-sm btn-block mt-3">
+              <i class="fas fa-cart-plus float-left text-primary" style="font-size: 25px;"></i>
+              Add to cart
+            </a>
+
+            <div class="dropdown-divider"></div>
+            <a href="#">
+              <i class="fas fa-map-marker-alt text-dark"></i>
+              Select Delivery Location
+            </a>
+          </div>
+        </div> <!-- Card ends  -->
+
+
+
+      </div> <!-- Add Product Card ends -->
+    </div> <!-- Top Page Design Ends -->
+
+
+    <div class="row border-bottom border-top">
+      <div class="col-md-12">
+        <p class="text-danger font-weight-bold">Save Extra with 5 offers</p>
+        <ul>
+          <li><span class="text-danger">No Cost EMI:</span> Avail No Cost EMI on select cards for orders above ₹3000
+          </li>
+          <li><span class="text-danger">Exchange Offer:</span> Enter your pincode to view Exchange offer</li>
+          <li><span class="text-danger">Cashback (2):</span> 5% back with Amazon Pay ICICI Bank Credit card for
+            Prime-members. 3% back for everybody else. Here's how </li>
+          <li><span class="text-danger">Bank Offer (2): </span> Get 5% up to Rs. 1500 Instant Discount on Bank of Baroda
+            Credit EMI transactions Here's how</li>
+          <li><span class="text-danger">Partner Offers (3): </span> Buy now & pay next month at 0% interest or pay in
+            EMIs with Amazon Pay Later. Instant credit upto ₹20,000. Check eligibility here! Here's how </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row border-bottom mt-3">
+      <div class="col-md-12 my-3">
+        <h6 class="text-warning font-weight-bold">Product description</h6>
+        <p class="ml-3">Colour: Sea Blue | Size name:32 GB Take strikingly clear photos with the
+          13MP + 2MP AI dual camera. Capture the beauty of any scene, while the AI-powered
+          portrait mode with Beautify blurs the background to create portraits that stand out.
+          The octa-core processor takes operational
+          efficiency to the next level which results in brilliant performance.</p>
+      </div>
+    </div>
+
+
+    <!-- Customer Review starts -->
+    <div class="row my-5">
+      <div class="col-md-4">
+        <p class="text-capitalize font-weight-bold">avg. customer review</p>
+        <button class="btn btn-sm bg-transparent">
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <span class="rating">& Up</span>
+        </button>
+        <br />
+        <button class="btn btn-sm bg-transparent">
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <span class="rating">& Up</span>
+        </button>
+        <br />
+        <button class="btn btn-sm bg-transparent">
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <span class="rating">& Up</span>
+        </button>
+        <br />
+        <button class="btn btn-sm bg-transparent">
+          <i class="fas fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <i class="far fa-star" style="color: #ffa41c;"></i>
+          <span class="rating">& Up</span>
+        </button>
+        <br />
+      </div>
+
+      <div class="col-md-8">
+        <p class="text-capitalize font-weight-bold">Top reviews from India</p>
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png" width="34"
+                height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+            <p class="font-weight-bold mt-2">
+              <i class="fas fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star mr-2" style="color: #ffa41c;"></i>
+              Learn selling from ME.
+            </p>
+            <p>
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png" width="34"
+                height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+            <p class="font-weight-bold mt-2">
+              <i class="fas fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star mr-2" style="color: #ffa41c;"></i>
+              Learn selling from ME.
+            </p>
+            <p>
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png" width="34"
+                height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+            <p class="font-weight-bold mt-2">
+              <i class="fas fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star mr-2" style="color: #ffa41c;"></i>
+              Learn selling from ME.
+            </p>
+            <p>
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+            </p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <a href="#" class="text-dark" style="text-decoration: none;"><img src="img/empty_avatar.png" width="34"
+                height="34" class="rounded-circle mr-2"> Narendar Modi</a>
+            <p class="font-weight-bold mt-2">
+              <i class="fas fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star" style="color: #ffa41c;"></i>
+              <i class="far fa-star mr-2" style="color: #ffa41c;"></i>
+              Learn selling from ME.
+            </p>
+            <p>
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+              hjkd sahdskahdjks hkdjhsjkfhsdkjfhk jdhfjkhjkf dhfs
+            </p>
+          </div>
+        </div>
+
+        <div class="dropdown-divider mt-3"></div>
+        <a href="#" class="font-weight-bold">See all reviews <i class="fas fa-caret-right"></i></a>
+      </div>
+    </div> <!-- Customer Review ends -->
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <!-- Drawer JS File -->
+  <script src="js/bootstrap-drawer.min.js"></script>
+  <!-- Custom JavaScript -->
+  <script src="js/custom.js"></script>
+</body>
+
+</html>
