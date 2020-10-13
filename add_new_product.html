@@ -21,7 +21,7 @@
   <link rel="stylesheet" href="css/bootstrap-drawer.min.css">
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/custom.css">
-  <title>Amazon : Your Seller Account</title>
+  <title>Amazon : Add New Product</title>
 </head>
 
 <body>
@@ -156,85 +156,179 @@
     </div>
   </nav> <!-- Navbar Ends -->
 
-  <!-- Your Seller Account Starts -->
-  <div class="container mt-5">
-    <h2>Your Seller Account</h2>
-    <!-- Seller Account Panel Starts -->
+  <div class="container my-5">
+    <!-- URL Breadcrumb Starts -->
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb bg-transparent ml-n3">
+        <li class="breadcrumb-item"><a href="your_seller_account.html">Your Seller Account</a></li>
+        <li class="breadcrumb-item active text-danger" aria-current="page">Add New Product</li>
+      </ol>
+    </nav> <!-- URL Breadcrumb Ends -->
+
+    <h3>Add New Product</h3>
+
+    <!-- Select Category Starts -->
     <div class="row">
-      <div class="col-md-4">
-        <a href="your_orders.html" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-truck"></i>
-                <span class="h4">Delivery</span>
+      <div class="col-md-12 d-flex justify-content-center">
+        <label for="productCategory" class="font-weight-bold mt-1">Select Category:</label>
+        <select class="form-control d-inline ml-3" style="width: 150px;" id="productCategory" name="productCategory">
+          <option>All</option>
+          <option>Book</option>
+          <option>Smartphone</option>
+          <option>Furniture</option>
+          <option>Fashion</option>
+        </select>
+      </div>
+    </div> <!-- Select Category Ends -->
+
+    
+    <!-- Product Form Starts -->
+    <form action="#" class="my-3" enctype="multipart/form-data" autocomplete="off" novalidate>
+
+      <!-- Product General Info Card Starts -->
+      <div class="card mx-auto" style="width: 50rem;">
+        <div class="card-header bg-warning">
+          <p class="font-weight-bold mb-0">Product General Information</p>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label for="productTitle">Product Title:</label>
+            <input type="text" placeholder="ABC Product" required class="form-control" id="productTitle">
+          </div>
+
+          <div class="form-group">
+            <label for="productDescription">Description:</label>
+            <textarea class="form-control" id="productDescription" rows="3" required></textarea>
+            <small class="text-muted font-weight-bold">Write description with comma(,) seperate values to create a list.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="productPrice">Product Price:</label>
+            <input type="text" placeholder="150.00" required class="form-control" id="productPrice">
+          </div>
+
+          <div class="form-group">
+            <label for="productDiscount">Product Discount(%):</label>
+            <input type="text" placeholder="40" required class="form-control" required id="productDiscount">
+          </div>
+
+          <input type="text" value="book" name="productCategory" id="productCategory" hidden>
+        </div>
+      </div> <!-- Product General Info Card Ends -->
+      
+      <!-- Search Page Image Card Starts -->
+      <div class="card mx-auto mt-3" style="width: 50rem;">
+        <div class="card-header bg-warning">
+          <p class="font-weight-bold mb-0">Search Page Image Upload</p>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="searchPageImage">Search Page Image:</label>
+                <input type="file" class="form-control-file" id="searchPageImage" required>
+                <small class="text-muted font-weight-bold">( width >=130px or 170px <= Width ) And ( height = 218px )</small>
               </div>
-              <small class="text-muted">Track orders placed by users.</small>
+            </div>
+
+            <div class="col-md-8">
+              <img src="img/add_new_product/search_page_image_help.png" class="img-fluid" alt="search page image" >
             </div>
           </div>
-        </a>
-      </div>
+        </div>
+      </div> <!-- Search Page Image Card Ends -->
 
-      <div class="col-md-4">
-        <a href="add_new_product.html" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-cart-plus"></i>
-                <span class="h4">Add New Product</span>
+      <!-- Product Main Page Image Card Starts -->
+      <div class="card mx-auto mt-3" style="width: 50rem;">
+        <div class="card-header bg-warning">
+          <p class="font-weight-bold mb-0">Product Main Page Image Upload</p>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="searchPageImage">Product Main Page Image 01:</label>
+                <input type="file" class="form-control-file" id="searchPageImage" required>
               </div>
-              <small class="text-muted">Create a new product to sell.</small>
+              <div class="form-group">
+                <label for="searchPageImage">Product Main Page Image 02:</label>
+                <input type="file" class="form-control-file" id="searchPageImage" required>
+              </div>
+              <div class="form-group">
+                <label for="searchPageImage">Product Main Page Image 03:</label>
+                <input type="file" class="form-control-file" id="searchPageImage" required>
+              </div>
+              <div class="form-group">
+                <label for="searchPageImage">Product Main Page Image 04:</label>
+                <input type="file" class="form-control-file" id="searchPageImage" required>
+              </div>
+              <small class="text-muted font-weight-bold">( width >=500px or 650px <= Width ) And ( height = 618px or 700px <= height )</small>
+            </div>
+
+            <div class="col-md-8">
+              <img src="img/add_new_product/product_main_page_image_help.png" class="img-fluid" alt="search page image" >
             </div>
           </div>
-        </a>
-      </div>
+        </div>
+      </div> <!-- Product Main Page Image Card Ends -->
 
-      <div class="col-md-4">
-        <a href="your_addresses.html" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-user-edit"></i>
-                <span class="h4">Update Account</span>
+
+      <!-- Shopping Cart Page Image Card Starts -->
+      <div class="card mx-auto mt-3" style="width: 50rem;">
+        <div class="card-header bg-warning">
+          <p class="font-weight-bold mb-0">Shopping Cart Page Image Upload</p>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="searchPageImage">Shopping Cart Page Image:</label>
+                <input type="file" class="form-control-file" id="searchPageImage" required>
               </div>
-              <small class="text-muted">Edit seller account details.</small>
+              <small class="text-muted font-weight-bold">( width >=180px ) And ( height = 180px )</small>
+            </div>
+
+            <div class="col-md-8">
+              <img src="img/add_new_product/shopping_cart_image_help.png" class="img-fluid" alt="search page image" >
             </div>
           </div>
-        </a>
-      </div>
-    </div> <!-- Seller Account Panel Starts -->
+        </div>
+      </div> <!-- Shopping Cart Page Image Card Ends -->
 
-    <div class="row">
-      <div class="col-md-4">
-        <a href="seller_account_intro.html" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-list-ol"></i>
-                <span class="h4">Product List</span>
+
+
+      <!-- Your Orders Page Image Card Starts -->
+      <div class="card mx-auto mt-3" style="width: 50rem;">
+        <div class="card-header bg-warning">
+          <p class="font-weight-bold mb-0">Your Orders Page Image Upload</p>
+        </div>
+        <div class="card-body">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group">
+                <label for="searchPageImage">Your Orders Page Image:</label>
+                <input type="file" class="form-control-file" id="searchPageImage" required>
               </div>
-              <small class="text-muted">Check your all products</small>
+              <small class="text-muted font-weight-bold">( width >=57px or 60px <= width ) And ( height = 90px )</small>
+            </div>
+
+            <div class="col-md-8">
+              <img src="img/add_new_product/your_orders_page_image_help.png" class="img-fluid" alt="search page image" >
             </div>
           </div>
-        </a>
-      </div>
+        </div>
+      </div> <!-- Your Orders Page Image Card Ends -->
 
-
-      <div class="col-md-4">
-        <a href="seller_account_intro.html" class="btn w-100">
-          <div class="card">
-            <div class="card-body">
-              <div class="card-title">
-                <i class="fas fa-2x fa-store-alt-slash"></i>
-                <span class="h4">Close Account</span>
-              </div>
-              <small class="text-muted">Facing losses ? Then close your account.</small>
-            </div>
+      <div class="card mt-3 mx-auto" style="width: 50rem;">
+        <button type="submit" class="btn btn-sm btn-outline-danger">
+          <div class="card-body py-0">
+            <i class="fas fa-cart-plus fa-3x"> Create</i>
           </div>
-        </a>
+        </button>
       </div>
-    </div>
-  </div> <!-- Your Seller Account Ends -->
+    </form>
+
+  </div>
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
